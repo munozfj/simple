@@ -12,6 +12,20 @@
   <dd><%= @user.email %></dd>
 </dl>
 
+<a href="<%= @user.attach.url %> "><b> File attached </b></a>
+<br/>
+<% # Will show the real size picture %>
+<%= image_tag @user.pic.url %>
+<br/>
+<% # Will the style MEDIUM configured before in your model %>
+<%= image_tag @user.pic.url(:medium) %>
+<br/>
+<% # Will the style THUMB configured before in your model %>
+<%= image_tag @user.pic.url(:thumb) %>
+<br/>
+
+
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               users_path, :class => 'btn'  %>

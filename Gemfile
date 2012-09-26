@@ -4,6 +4,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.8'
 gem 'jquery-rails'
 gem 'mail'
+gem 'paperclip'
 
 #Ambientes de Desarrollo y Test
 group :development, :test do
