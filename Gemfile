@@ -9,6 +9,7 @@ gem 'paperclip'
 #Ambientes de Desarrollo y Test
 group :development, :test do
   gem 'sqlite3'
+  gem 'annotate'
 end
 
 #Ambiente de Produccion
