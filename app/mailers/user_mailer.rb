@@ -5,6 +5,6 @@ class UserMailer < ActionMailer::Base
     @user=user
     attachments["living-book.png"] = File.read("#{Rails.root}/app/assets/images/living-books.png")
 
-    mail(to: "#{user.name} <#{user.email}>", subject: "Registrado en MySimple")
+    mail(to: "#{user.name} < #{user.email} >", subject: "Registrado en MySimple")
   end
 end
