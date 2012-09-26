@@ -126,6 +126,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails
   jquery-rails
+  mail
   pg
   rails (= 3.2.8)
   sass-rails

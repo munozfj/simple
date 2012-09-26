@@ -1,4 +1,6 @@
 Simple::Application.routes.draw do
+  resources :users
+
   resources :books
 
   root :to => 'books#index'

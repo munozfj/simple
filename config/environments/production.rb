@@ -49,7 +49,23 @@ Simple::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  # Configuraciones de mail
+  config.action_mailer.default_url_options = { :host => 'https://mysimple.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true #Cambiar a false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = { 
+    address: "smtp.gmail.com" ,
+    port: 587,
+    domain:"example.com" ,
+    authentication: "plain" ,
+    user_name: ENV["GMAIL_USERNAME"] ,
+    password: ENV["GMAIL_PASSWORD"],
+    enable_starttls_auto: true
+  }
+  #Fin configuracion mail
 
   # Enable threaded mode
   # config.threadsafe!
