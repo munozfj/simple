@@ -5,6 +5,8 @@ gem 'rails', '3.2.8'
 gem 'jquery-rails'
 gem 'mail'
 gem 'paperclip'
+gem 'bootswatch-rails'
+gem 'bootstrap-sass'
 
 #Ambientes de Desarrollo y Test
 group :development, :test do
@@ -24,6 +26,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
   gem 'twitter-bootstrap-rails'
+  
 end
 
 
